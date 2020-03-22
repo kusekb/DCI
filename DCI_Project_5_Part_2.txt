@@ -1,0 +1,45 @@
+# Project 3, Task 1:
+
+cd ~/bin
+nano hungry.sh
+
+# inside the bash file, we will type these commands:
+
+#	#!/bin/bash
+#	echo "I am hungry. Feed me data." >> ~/demands.txt
+#	date >> ~/demands.log
+
+ls
+
+# the bash file won't be green (an executable)
+
+chmod +x hungry.sh
+
+ls
+
+# now it should be green. let's test it!
+
+hungry.sh
+cd ~
+ls
+cat demands.txt demands.log
+
+# Project 3, Task 2:
+
+crontab -e
+
+# Since we're using nano, press 1 if you haven't done so before
+# inside of crontab, we will type this row into the table:
+
+#	* * * * * bash ~/bin/hungry.sh
+
+# Now all we have to do is wait a few minutes and check the results!
+
+cd ~
+ls
+cat demands.txt demands.log
+
+
+
+
+

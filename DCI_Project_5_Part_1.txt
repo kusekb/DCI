@@ -1,0 +1,29 @@
+# Project 2, Task 1:
+
+# sudo apt install mlocate
+# You will need to run the code above if you never have before
+
+cd ~/Desktop
+mkdir super_secret_stuff
+echo "secret info that nobody else can see" >> top_secret.txt
+ls
+cat top_secret.txt
+man updatedb
+sudo updatedb
+locate top_secret.txt >> ~/secret_place.txt
+cd ~
+ls
+cat_secret_place.txt
+
+# Project 2, Task 2:
+# Part A:
+
+man find
+sudo find / -maxdepth 4 -type f -size +1M -exec ls {} -lh \;
+
+# Part B:
+
+sudo find / -maxdepth 4 -type f -size +1M -exec ls {} -lh \; | sort -k 5hr >> filesizes.txt
+cd ~
+ls
+less filesizes.txt
